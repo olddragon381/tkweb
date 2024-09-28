@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>ShopWibu</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="../assets/themify-icons-font/themify-icons/themify-icons.css">
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="../assets/slick-1.8.1/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="../assets/slick-1.8.1/slick/slick-theme.css"/>
+  <link rel="stylesheet" href="../main.css">
+
+</head>
+<body>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <nav class="navbar navbar-default">
+    <div class="container">
+    <div class="header" id="header">
+      
+      <a href="index.html"><img class="nav-logoshop" src="..\img\logo\logoshop.png" alt="logohsop"></a>
+      <div class="dropdown" id="mobile-menu">
+        <button class="dropdown-toggle" type="button" data-toggle="dropdown"><i class="ti-menu"></i>
+        </button>
+        <ul class="dropdown-menu">
+          <li><a href="./.index.html" class="nav-link" >Home</a></li>
+          <li><a href="../shop.html" class="nav-link" >Shop</a></li>
+          <li><a href="../forum.html" class="nav-link" >Forum</a></li>
+          <li><a href="../gallery.html" class="nav-link" >Gallery</a></li>
+          <li><a href="#" data-toggle="modal" data-target="#header_search">
+            <i class="glyphicon glyphicon-search"></i>
+          </a></li>
+          <li><a href="#"data-toggle="modal" data-target="#header_signup" >Sign up</a></li>
+          <li><a href="#"data-toggle="modal" data-target="#header_signin" >Sign in</a></li>
+        </ul>
+      </div>  
+        
+        <div class="nav">
+        <a href="../index.html" class="nav-link" >Home</a>
+          <a href="../shop.html" class="nav-link" >Shop</a>
+          <a href="../forum.html" class="nav-link" >Forum</a>
+          <a href="../gallery.html" class="nav-link" >Gallery</a>
+        </div>
+        <div class="header-auth">
+           
+        <a href="#" data-toggle="modal" data-target="#header_search">
+          <i class="glyphicon glyphicon-search"></i>
+        </a>
+        <a href="#"data-toggle="modal" data-target="#header_signup" class="signup">Sign up</a>
+        <a href="#"data-toggle="modal" data-target="#header_signin" class="signin">Sign in</a>
+        
+      </div> 
+      </div>
+        
+      
+      
+    </div>
+  </div>
+  </nav>
+  <!-- Modal -->
+  <div class="modal fade" id="header_search">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Tìm kiếm</h4>
+        </div>
+        <div class="modal-body">
+          <input type="text" class="form-control" id="inputModalSearch" name="q" placeholder="Tìm kiếm...">
+          <div class="btn-seach">
+                <p>Tìm kiếm</p>
+              </div>
+            </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="header_signup">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        </div>
+        <div class="modal-body">
+          <form class="form-horizontal" action="/action_page.php">
+            <h1 class="center-perfect">Đăng kí</h1>
+            <div class="form-group">
+              <div class="col-sm-12">  
+                <div class="text-field">
+                  <label for="username" id="user">Email</label>
+                  <input type="text" id="email" placeholder="Email của bạn" />
+                </div> 
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-sm-12">  
+                <div class="text-field">
+                  <label for="username" id="user">Tên đăng nhập</label>
+                  <input type="text" id="user" placeholder="Đăng nhập tài khoản" />
+                </div> 
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-sm-12">  
+                <div class="text-field">
+                  <label for="username" id="user">Mật khẩu</label>
+                  <input type="password" id="passwd" placeholder="Mật khẩu của bạn" />
+                </div>
+                
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-sm-12">  
+                <div class="text-field">
+                  <label for="username" id="user">Xác nhận lại mật khẩu</label>
+                  <input type="password" id="passwd" placeholder="Xác nhận lại mật khẩu của bạn" />
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class=" col-sm-6">
+                <div>
+                  <label><input type="checkbox" id ="showpass"onclick="showPWD()"> Hiển thị mật khẩu </label> 
+                </div>
+              </div>
+              <div class=" col-sm-6">
+                <button class="btn-social btn-danger">
+
+                  <img class="icons_social" src="../img/icons/btn_google_light.svg">
+                  <span class="">  Đăng nhâp bằng Google</span>
+                </button>
+                <button  class="btn-social btn-primary">
+                  <img class="icons_social"src="../img/icons/f_logo_RGB-White_58.png">
+                  <span class="">Đăng nhâp bằng Facebook</span>
+                </button>
+              </div>
+               
+            </div>
+          </form>
+          <div class="modal-footer">
+          <button type="button" class="btn btn-primary">Đăng kí</button>
+        </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="header_signin">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        </div>
+        <div class="modal-body">
+          <form class="form-horizontal" action="/action_page.php">
+            <h1 class="center-perfect">Đăng nhập</h1>
+            <div class="form-group">
+              <div class="col-sm-12">  
+                <div class="text-field">
+                  <label for="username" id="user">Tên đăng nhập</label>
+                  <input type="text" id="user" placeholder="Đăng nhập tài khoản" />
+                </div> 
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-sm-12">  
+                <div class="text-field">
+                  <label for="username" id="user">Mật khẩu</label>
+                  <input type="password" id="passwd" placeholder="Mật khẩu của bạn" />
+                </div>
+                
+              </div>
+            </div>
+            <div class="form-group">
+              <div class=" col-sm-6">
+                <div>
+                  <label><input type="checkbox" onclick="showPWD()"> Hiển thị mật khẩu </label> 
+                </div>
+              </div>
+              <div class=" col-sm-6">
+                <label><input type="checkbox">Lưu đăng nhập</label>
+              </div>  
+            </div>
+            <div class=" col-sm-6">
+              <button class="btn-social btn-danger">
+
+                <img class="icons_social" src="../img/icons/btn_google_light.svg">
+                <span class="">  Đăng nhâp bằng Google</span>
+              </button>
+              <button  class="btn-social btn-primary">
+                <img class="icons_social"src="../img/icons/f_logo_RGB-White_58.png">
+                <span class="">Đăng nhâp bằng Facebook</span>
+              </button>
+            </div>
+          </form>
+          <div class="modal-footer">
+          <div>
+            Nếu bạn chưa có tài khoản hãy <a data-dismiss="modal" href="#"data-toggle="modal" data-target="#header_signup" >tạo một cái</a>
+          </div>
+          <button type="center-perfect button" class="btn btn-primary">Đăng nhập</button>
+        </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  <!--End Modal-->
+<div class="container-fluid">
+    <div class="container">
+      <nav class="link-web navbar-default">
+        <ul>
+        <li class="nav-list-header"><a href="../index.html" title="Đến trang chủ">Home</a></li>
+        <li><a href="../shop.html" title="Shop">Shop</a></li>
+        <li><a href="../shop-figure.html" title="Shop">Shop Figure</a></li>
+        <li><a href="../products/SD NOBUNAGA GUNDAM EPYON - SD GUNDAM WORLD HEROES.html" title="">SD NOBUNAGA GUNDAM EPYON - SD GUNDAM WORLD HEROES</a></li>
+        </ul>
+        
+    </nav>
+      <div class="row"> 
+        <div class=" col-xs-5 col-sm-5 col-md-5 col-lg-5 ">
+            <div class="slider stickydiv">
+              <div class="slider-for ">
+                  <img src="../img/shop/gundam/item/SD_gundam/SD-gundam-1.webp">
+                  <img src="../img/shop/gundam/item/SD_gundam/SD-gundam-1-1.webp">
+                  <img src="../img/shop/gundam/item/SD_gundam/SD-gundam-1-2.webp">
+                </div>
+              <div class="slider-nav">
+                  <div class="slider-nav-item"><img src="../img/shop/gundam/item/SD_gundam/SD-gundam-1.webp"></div>
+                  <div class="slider-nav-item"><img src="../img/shop/gundam/item/SD_gundam/SD-gundam-1-1.webp"></div>
+                  <div class="slider-nav-item"><img src="../img/shop/gundam/item/SD_gundam/SD-gundam-1-2.webp"></div>
+
+            </div>
+            </div>
+        </div>
+        
+        <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
+            <div class="product-container">
+              <div class="product-heading">
+               <h3>SD NOBUNAGA GUNDAM EPYON - SD GUNDAM WORLD HEROES</h3>
+               <div class="product-heading-id">
+                <span><b>Mã sản phẩm:</b> MGGD5063833</span>
+               </div>
+              </div>
+              <div class="product-price">
+                <span class="price">
+                  199,000 ₫
+                </span>
+              </div>
+              <div class="quantity-area">
+                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                  <div class="quantity-button">
+                  <input type="button" value="-"  class="qty-btn btn-default btn-subtract">
+                  <input type="text" class="item-quantity" min="1" value="1">
+                  <input type="button" value="+" class="qty-btn btn-default btn-add">
+                  </div>
+                </div>
+                <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
+                  <button class="place-buy-btn"> 
+                    Thêm vào giỏ 
+                  </button>
+                </div>
+              </div>
+              <div class="product-information" data-spy="scroll" data-target=".n" data-offset="50">
+                <ul  class=" nav nav-tabs" role="tablist">
+                  <li role="presentation" class="tab-product-info active">
+                    <a href="#infomation" aria-controls="infomation"   aria-expanded="true">Thông tin sản phẩm</a>
+                  </li>
+                  <li role="presentation" class="tab-product-info">
+                    <a href="#img-product" aria-controls="img-product"  >Hình ảnh</a>
+                  </li>
+      
+                </ul>
+                <div id="infomation">
+                  <span style="font-size:15px">Nhân vật <strong>Oda Nobunaga</strong>&nbsp;từ thời kì Chiến Quốc Nhật Bản&nbsp;được tạo hình lại theo phong cách Epyon Gundam đầy mới mẻ trong bộ sản phẩm&nbsp;<strong>SD Nobunaga Gundam Epyon - SD Gundam World Heroes Danh Tướng Thế Giới&nbsp;đang có bán tại nShop! </strong>Thế hệ SD Gundam mới với biên độ cử động ở cổ tay cực rộng, dễ dàng tạo cả những dáng chiến đấu đẹp mắt!</span>
+                  <tr><td style="background-color:#ffffcc; width:1203.4px"><h2 style="line-height: 20.7999992370605px; text-align: start;">
+                    <span style="font-size:12px"><strong><span style="color:#ff0000">Thông tin SD Nobunaga Gundam Epyon&nbsp;- SD Gundam World Heroes</span></strong></span></h2><ul><li style="text-align: left;"><span style="font-size:12pt">Cấp độ SD, không có tỷ lệ</span></li><li style="text-align: left;"><span style="font-size:12pt">Độ chi tiết thấp, khớp chuyển động tương đối linh hoạt. Ráp theo kiểu bấm khớp, không cần dùng keo dán.</span></li><li style="text-align: left;"><span style="font-size:12pt">Thuộc Series: <strong><u><a target="_blank" href="https://www.nshop.com.vn/blogs/gundam-plaza/phim-sd-gundam-world-heroes-moi-2021"><span style="color:#0000ff">SD Gundam World Heroes</span></a></u></strong></span></li><li style="text-align: left;"><span style="font-size:12pt">Tạo hình từ nhân vật: Oda Nobunaga</span></li><li style="text-align: left;"><span style="font-size:12pt">Trang bị: Heshikiri Hasebe,&nbsp;
+                    Zetto Hijakuryusen</span>
+                    <li style="text-align: left;"><span style="font-size:12pt">Không kèm đế dựng&nbsp;</span><em></em><span style="font-size:12pt">&nbsp;</span></li>
+                    <li style="text-align: left;"><span style="font-size:12pt">Sản phẩm Gunpla chính hãng của Bandai</span></li>
+                  </ul></td></tr>
+                </br>
+                    </div>
+                <div id="img-product">
+                  <h2><span style="font-size:16px"><strong><span style="color:#ff0000">
+                      Một số hình ảnh sản phẩm </span></strong></span></h2> 
+                  <div class="container product-img">
+                    <p style="text-align: left;"><strong>SD Nobunaga Gundam Epyon</strong>&nbsp;là nhân vật trong series anime <strong>SD Gundam Danh Tướng Thế Giới</strong>. Một nhân vật tầm cỡ với mong muốn tự tay chinh phạt, thống nhất&nbsp;<em><strong>Musha World</strong></em>. Tham vọng của anh ta thậm chí còn xa hơn, chính là thống nhất tất cả mọi thế giới khác!</p>
+                  <p style="text-align: center;"><img src="../img/shop/gundam/item/SD_gundam/SD-gundam-1-1.webp"></p>
+                  <p style="text-align: center;"> <img src="../img/shop/gundam/item/SD_gundam/SD-gundam-1-2.webp"></p>
+                  <p style="text-align: left;">Vũ khí đặc trưng của <strong>Nobunaga Gundam Epyon</strong> là Heshikiri Hasebe, thanh katana quý báu được gia cố đẹp mắt. Nobunaga có thể sử dụng thanh katana này để thi triển kĩ năng kết liễu Zetto Hijakuryusen vô cùng mạnh mẽ!</p>
+                  <p style="text-align: center;"><img src="../img/shop/gundam/item/SD_gundam/SD-gundam-1-4.webp"></p>
+                  <p style="text-align: center;"><img src="../img/shop/gundam/item/SD_gundam/SD-gundam-1-3.webp"></p>
+                  <p style="text-align: left;">Các Mobile Suit trong series <strong>Gundam SD Danh Tướng Thế Giới</strong>&nbsp;mới này được tạo hình theo phong cách rất mới, rất khác biệt so với trước đây. Điểm nổi bật đầu tiên là sự thay đổi ở tỷ lệ cơ thể, cao ráo hơn, tạo thế tốt hơn trước kia, nhiều chi tiết hơn, nhiều màu sắc hơn.&nbsp;</p>
+                  <p style="text-align: left;">Và đặc biệt là Bandai giảm thiểu lượng decal mà người chơi phải dán xuống mức rất thấp. Bên cạnh đó, các mẫu <strong>SD Gundam World Heroes</strong> còn có thể tùy biến trang bị, tạo ra sự biến đổi đa dạng.</p>
+                  
+                
+                  
+                  </div>
+
+                  
+                    </div>
+                 
+              </div>
+
+        </div>
+        
+    </div>
+    
+    </div>
+    <div class="product1">
+      <div class="container">
+        </hr>
+         <h2 >THƯỜNG ĐƯỢC MUA CÙNG</h2>
+         <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+          <div class="place-item">
+          <img src="../img/shop/gundam/item/SD_gundam/SD-gundam-4.webp">
+           <div class="place-body">
+            
+            <p class="place-name-item">AILE STRIKE GUNDAM (SD EX-STANDARD)</p>
+            <p class="place-cost-item">
+              <span class="price">280,000 ₫</span>
+            </p>
+            <a href="../products/GF13-017NJII GOD GUNDAM HYPER MODE .html" class="place-buy-btn">Buy</a>
+            </div>
+          </div>              
+          </div>
+          <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+            <div class="place-item">
+            <img src="../img/shop/gundam/item/HG_gundam/hg-gundam-4.webp">
+             <div class="place-body">
+              
+              <p class="place-name-item">IO FRAME SHIDEN - HGIBO 1/144 - MÔ HÌNH GUNDAM CHÍNH HÃNG BANDAI</p>
+              <p class="place-cost-item">
+                <span class="price">320,000 ₫</span>
+              </p>
+              <a href="../products/SD NOBUNAGA GUNDAM EPYON - SD GUNDAM WORLD HEROES.html" class="place-buy-btn">Buy</a>
+              </div>
+            </div>              
+          </div>
+          <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+            <div class="place-item">
+          <img src="../img/shop/gundam/item/MG_gundam/MG-gundam-4.webp">
+           <div class="place-body">
+            
+            <p class="place-name-item">DESTINY GUNDAM - MG 1/100 - ROBOT GUNPLA CHÍNH HÃNG BANDAI</p>
+            <p class="place-cost-item">
+              <span class="price">1,280,000 ₫</span>
+            </p>
+            <a href="../products/SD NOBUNAGA GUNDAM EPYON - SD GUNDAM WORLD HEROES.html" class="place-buy-btn">Buy</a>
+            </div>
+          </div>              
+          </div>
+          <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+            <div class="place-item">
+            <img src="../img/shop/gundam/item/SD_gundam/SD-gundam-6.webp">
+             <div class="place-body">
+              
+              <p class="place-name-item">MUSHA GUNDAM MK-III - SD GUNDAM - LEGEND BB - MÔ HÌNH CHÍNH HÃNG BANDAI</p>
+              <p class="place-cost-item">
+                <span class="price">320,000 ₫</span>
+              </p>
+              <a href="../products/GF13-017NJII GOD GUNDAM HYPER MODE .html" class="place-buy-btn">Buy</a>
+              </div>
+            </div>              
+          </div>
+      </div>
+      <div class="product1">
+        <div class="container">
+          </hr>
+           <h2 >SẢN PHẨM LIÊN QUAN</h2>
+           <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+            <div class="place-item">
+             <div class="place-solout">Hết hàng</div>
+              <img src="../img/shop/gundam/item/MG_gundam/MG-gundam-1.webp">
+              <div class="place-body">
+                
+                <p class="place-name-item">GF13-017NJII GOD GUNDAM HYPER MODE - MG 1/100 - ROBOT GUNPLA CHÍNH HÃNG BANDAI</p>
+                <p class="place-cost-item">
+                  <span class="price">1,080,000 ₫</span>
+                 </p>
+                 <a href="../products/GF13-017NJII GOD GUNDAM HYPER MODE .html" class="place-buy-btn">Buy</a>
+               </div>
+             </div>              
+           </div>
+            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+              <div class="place-item">
+                <img src="../img/shop/gundam/item/MG_gundam/MG-gundam-3.webp">
+                <div class="place-body">
+                  
+                  <p class="place-name-item">F91 GUNDAM F91 VER 2.0 - MG - 1/100 - MÔ HÌNH CHÍNH HÃNG BANDAI</p>
+                  <p class="place-cost-item">
+                    <span class="price">1,080,000 ₫</span>
+                   </p>
+                   <a href="../products/GF13-017NJII GOD GUNDAM HYPER MODE .html" class="place-buy-btn">Buy</a>
+                 </div>
+               </div>              
+             </div>
+            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+              <div class="place-item">
+              <div class="img-item">
+                <img  src="../img/shop/gundam/item/MG_gundam/MG-gundam-2.webp">
+              </div>
+              
+               <div class="place-body">
+                
+                <p class="place-name-item">MSZ-010 ZZ GUNDAM VER. KA (MG - 1/100) - MÔ HÌNH GUNPLA CHÍNH HÃNG BANDAI</p>
+                <p class="place-cost-item">
+                  <span class="price">1,580,000 ₫</span>
+                </p>
+                <a href="../products/GALLANTMON - FIGURE-RISE STANDARD - DIGIMON ADVENTURE.html" class="place-buy-btn">Buy</a>
+                </div>
+              </div>              
+            </div>
+            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+              <div class="place-item">
+              <img src="../img/shop/gundam/item/HG_gundam/hg-gundam-3.webp">
+               <div class="place-body">
+                
+                <p class="place-name-item">GUNCANNON (REVIVE VER.) (HGUC - 1/144) (MÔ HÌNH GUNDAM)</p>
+                <p class="place-cost-item">
+                  <span class="price">320,000 ₫</span>
+                </p>
+                <a href="../products/GF13-017NJII GOD GUNDAM HYPER MODE .html" class="place-buy-btn">Buy</a>
+                </div>
+              </div>              
+            </div>
+        </div>
+      
+       
+
+      </div>
+      
+</div>
+    </div>
+</div>
+<footer class="black-bg" id="footer">
+  <div class="container">
+      <div class="row">
+          <div class="col-sm-4 ">
+            <a href="../index.html"><img  class="white-bg"class="nav-logoshop" src="..\img\logo\logoshop.png" alt="logohsop"></a>
+              <ul class="list-unstyled text-light footer-link-list">
+                  <li>
+                    <p class="center-perfect text-decoration-none">114/36 Đề Thám, Phường Cầu Ông Lãnh, Quận 1, 
+                      Thành phố Hồ Chí Minh, Vietnam</p>
+                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.6028377183443!2d106.69369831471823!3d10.765060992329232!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f15b39dcb01%3A0x3c27a99e5ceb158d!2zMTE0LzM2IMSQ4buBIFRow6FtLCBQaMaw4budbmcgQ-G6p3Ugw5RuZyBMw6NuaCwgUXXhuq1uIDEsIFRow6BuaCBwaOG7kSBI4buTIENow60gTWluaCwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1662205169846!5m2!1svi!2s" width="450" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                  </li>
+              </ul>
+          </div>
+
+          <div class="col-sm-4">
+              <h2>Sản phẩm</h2>
+              <ul class="list-unstyled text-light footer-link-list">
+                  <li><a href="../index.html">Home</a></li>
+                  <li><a href="../shop.html">Shop</a></li>
+                  <li><a href="../forum.html">Forum</a></li>
+                  <li><a href="../gallery.html">Gallery</a></li>     
+              </ul>
+          </div>
+
+          <div class="col-sm-4 ">
+            <h2>Đại học Nguyễn Tất Thành</h2>
+            <ul class="list-unstyled text-light footer-link-list">
+              <li><p class="center-perfect lef"">Copyright © 2022 Trần Thanh Tùng</p></li>
+              <li><p class="center-perfect lef"">Mã sv:2100009418</p></li>
+              <li><p class="center-perfect lef"">Lớp 21DTH3B</p></li>
+              <li><p class="center-perfect lef"">Môn Thiết kế web</p></li>
+              <li><p class="center-perfect lef"">Giáo viên bộ môn: Nguyễn Mai Huy</p></li>
+              <li><a href="mailto:tranminhtung381@gmail.com">tranminhtung381@gmail.com </a></li>
+              <li><a href="mailto:2100009418@nttu.edu.vn">2100009418@nttu.edu.vn</a></li>
+
+              <li><a href="tel:091-9592-395">091-9592-395
+          </ul>
+            
+          </div>
+
+      </div>
+
+
+ 
+
+
+</footer>  
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+				
+<script  src="../assets/js/app.js"></script>
+<script  type = "module"  src = "https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js" > </script> 
+<script  nomodule  src = "https: // unkg .com / ionicons @ 5.5.2 / dist / ionicons / ionicons.js " > </script>
+
+</body>
+
+</html>

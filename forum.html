@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Forum</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="./assets/themify-icons-font/themify-icons/themify-icons.css">
+  <link rel="stylesheet" href="./main.css">
+
+</head>
+<body>
+
+<div class="container-fluid">
+  <nav class="navbar navbar-default">
+    <div class="container">
+    <div class="header" id="header">
+      
+      <a href="index.html"><img class="nav-logoshop" src=".\img\logo\logoshop.png" alt="logohsop"></a>
+      <div class="dropdown" id="mobile-menu">
+        <button class="dropdown-toggle" type="button" data-toggle="dropdown"><i class="ti-menu"></i>
+        </button>
+        <ul class="dropdown-menu">
+          <li><a href="./index.html" class="nav-link" >Home</a></li>
+          <li><a href="./shop.html" class="nav-link" >Shop</a></li>
+          <li><a href="./forum.html" class="nav-link" >Forum</a></li>
+          <li><a href="./gallery.html" class="nav-link" >Gallery</a></li>
+          <li><a href="#" data-toggle="modal" data-target="#header_search">
+            <i class="glyphicon glyphicon-search"></i>
+          </a></li>
+          <li><a href="#"data-toggle="modal" data-target="#header_signup" >Sign up</a></li>
+          <li><a href="#"data-toggle="modal" data-target="#header_signin" >Sign in</a></li>
+        </ul>
+      </div>  
+        
+        <div class="nav">
+        <a href="./index.html" class="nav-link" >Home</a>
+          <a href="./shop.html" class="nav-link" >Shop</a>
+          <a href="./forum.html" class="nav-link" >Forum</a>
+          <a href="./gallery.html" class="nav-link" >Gallery</a>
+        </div>
+        <div class="header-auth">
+           
+        <a href="#" data-toggle="modal" data-target="#header_search">
+          <i class="glyphicon glyphicon-search"></i>
+        </a>
+        <a href="#"data-toggle="modal" data-target="#header_signup" class="signup">Sign up</a>
+        <a href="#"data-toggle="modal" data-target="#header_signin" class="signin">Sign in</a>
+        
+      </div> 
+      </div>
+        
+      
+      
+    </div>
+  </div>
+  </nav>
+  <!-- Modal -->
+  <div class="modal fade" id="header_search">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Tìm kiếm</h4>
+        </div>
+        <div class="modal-body">
+          <input type="text" class="form-control" id="inputModalSearch" name="q" placeholder="Tìm kiếm...">
+          <div class="btn-seach">
+                <p>Tìm kiếm</p>
+              </div>
+            </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="header_signup">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        </div>
+        <div class="modal-body">
+          <form class="form-horizontal" action="/action_page.php">
+            <h1 class="center-perfect">Đăng kí</h1>
+            <div class="form-group">
+              <div class="col-sm-12">  
+                <div class="text-field">
+                  <label for="username" id="user">Email</label>
+                  <input type="text" id="email" placeholder="Email của bạn" />
+                </div> 
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-sm-12">  
+                <div class="text-field">
+                  <label for="username" id="user">Tên đăng nhập</label>
+                  <input type="text" id="user" placeholder="Đăng nhập tài khoản" />
+                </div> 
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-sm-12">  
+                <div class="text-field">
+                  <label for="username" id="user">Mật khẩu</label>
+                  <input type="password" id="passwd" placeholder="Mật khẩu của bạn" />
+                </div>
+                
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-sm-12">  
+                <div class="text-field">
+                  <label for="username" id="user">Xác nhận lại mật khẩu</label>
+                  <input type="password" id="passwd" placeholder="Xác nhận lại mật khẩu của bạn" />
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class=" col-sm-6">
+                <div>
+                  <label><input type="checkbox" id ="showpass"onclick="showPWD()"> Hiển thị mật khẩu </label> 
+                </div>
+              </div>
+              <div class=" col-sm-6">
+                <button class="btn-social btn-danger">
+
+                  <img class="icons_social" src="./img/icons/btn_google_light.svg">
+                  <span class="">  Đăng nhâp bằng Google</span>
+                </button>
+                <button  class="btn-social btn-primary">
+                  <img class="icons_social"src="./img/icons/f_logo_RGB-White_58.png">
+                  <span class="">Đăng nhâp bằng Facebook</span>
+                </button>
+              </div>
+               
+            </div>
+          </form>
+          <div class="modal-footer">
+          <button type="button" class="btn btn-primary">Đăng kí</button>
+        </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="header_signin">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        </div>
+        <div class="modal-body">
+          <form class="form-horizontal" action="/action_page.php">
+            <h1 class="center-perfect">Đăng nhập</h1>
+            <div class="form-group">
+              <div class="col-sm-12">  
+                <div class="text-field">
+                  <label for="username" id="user">Tên đăng nhập</label>
+                  <input type="text" id="user" placeholder="Đăng nhập tài khoản" />
+                </div> 
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-sm-12">  
+                <div class="text-field">
+                  <label for="username" id="user">Mật khẩu</label>
+                  <input type="password" id="passwd" placeholder="Mật khẩu của bạn" />
+                </div>
+                
+              </div>
+            </div>
+            <div class="form-group">
+              <div class=" col-sm-6">
+                <div>
+                  <label><input type="checkbox" onclick="showPWD()"> Hiển thị mật khẩu </label> 
+                </div>
+              </div>
+              <div class=" col-sm-6">
+                <label><input type="checkbox">Lưu đăng nhập</label>
+              </div>  
+            </div>
+            <div class=" col-sm-6">
+              <button class="btn-social btn-danger">
+
+                <img class="icons_social" src="./img/icons/btn_google_light.svg">
+                <span class="">  Đăng nhâp bằng Google</span>
+              </button>
+              <button  class="btn-social btn-primary">
+                <img class="icons_social"src="./img/icons/f_logo_RGB-White_58.png">
+                <span class="">Đăng nhâp bằng Facebook</span>
+              </button>
+            </div>
+          </form>
+          <div class="modal-footer">
+          <div>
+            Nếu bạn chưa có tài khoản hãy <a data-dismiss="modal" href="#"data-toggle="modal" data-target="#header_signup" >tạo một cái</a>
+          </div>
+          <button type="center-perfect button" class="btn btn-primary">Đăng nhập</button>
+        </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  <!--End Modal-->
+    <div class="container">
+       <nav class="link-web navbar-default">
+            <ul>
+            <li class="nav-list-header"><a href="index.html" title="Đến trang chủ">Home</a></li>
+            <li><a href="./forum.html" title="Forum">Forum</a></li>
+            </ul>
+            
+        </nav>
+        <div class="row">
+            <div class="col-sm-9"> 
+                  <form class="form-horizontal " action="#">
+                    <h1 class="center-perfect">Bài viết</h1>
+                    <div class="form-group">
+                      <div class="col-sm-12">  
+                        <div class="text-field">
+                          <label for="username" >Tiêu đề</label>
+                          <input type="text" id="tieuDe" placeholder="Tiêu đề bài viết" />
+                        </div> 
+                      </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-12">  
+                          <div class="text-field">
+                            <label for="username" >Link</label>
+                            <input type="text" id="linkTd" placeholder="Link tiêu đề bài viết" />
+                          </div> 
+                        </div>
+                      </div>
+                      <button class="btn btn-success add-ifoma" onclick="luuBaiViet()">Them tin</button>
+                  </form>
+                <div class="forum_title">
+                    <h1>Tin tức</h1>
+                </div>
+                <div id="subf1"></div>
+                <div>
+                <a href="./forums/i1.html">    
+                    <div class="subforum" >
+                        <div class="content">            
+                            <p>HƯỚNG DẪN LẮP RÁP GUNDAM CƠ BẢN CHO NGƯỜI MỚI CHƠI</p>
+                        </div>
+                        <div class="subforum-post">
+                            <span>24 post</span>
+                        </div>
+                        <div class="subforum-time">
+                            <span>Đăng vào ngày 03/28/2019</span>
+                        </div>
+                    </div>
+                </a></div>
+                <div>
+                <a href="./forums/i1.html">    
+                    <div class="subforum" id="subf2">
+                        <div class="content">            
+                            <p>Top 10 nhân vật anime mạnh nhất</p>
+                        </div>
+                        <div class="subforum-post">
+                            <span>24 post</span>
+                        </div>
+                        <div class="subforum-time">
+                            <span>Đăng vào ngày 03/28/2019</span>
+                        </div>
+                    </div>
+                </a></div>
+                <div>
+                <a href="./forums/i1.html">    
+                    <div class="subforum" id="subf3">
+                        <div class="content">            
+                            <p>Giới thiệu đồ án qua Youtube</p>
+                        </div>
+                        <div class="subforum-post">
+                            <span>24 post</span>
+                        </div>
+                        <div class="subforum-time">
+                            <span>Đăng vào ngày 03/28/2019</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="forum_title">
+                    <h1>Kênh chat</h1>
+                </div>
+                <div id="wrapper">
+                    <div id="menu">
+                        <p class="welcome">Hello</p>
+                        <p class="logout"><a id="exit" href="#">Thoát</a></p>
+                    </div>
+         
+                    <div id="chatbox"></div>
+         
+                    <form name="message" action="">
+                        <input name="usermsg" type="text" id="usermsg" />
+                        <input name="submitmsg" type="submit" id="submitmsg" value="Send" />
+                    </form>
+                </div>
+            </div>
+            
+
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="black-bg" id="footer">
+  <div class="container">
+      <div class="row">
+          <div class="col-sm-4 ">
+            <a href="index.html"><img  class="white-bg"class="nav-logoshop" src=".\img\logo\logoshop.png" alt="logohsop"></a>
+              <ul class="list-unstyled text-light footer-link-list">
+                  <li>
+                    <p class="center-perfect text-decoration-none">114/36 Đề Thám, Phường Cầu Ông Lãnh, Quận 1, 
+                      Thành phố Hồ Chí Minh, Vietnam</p>
+                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.6028377183443!2d106.69369831471823!3d10.765060992329232!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f15b39dcb01%3A0x3c27a99e5ceb158d!2zMTE0LzM2IMSQ4buBIFRow6FtLCBQaMaw4budbmcgQ-G6p3Ugw5RuZyBMw6NuaCwgUXXhuq1uIDEsIFRow6BuaCBwaOG7kSBI4buTIENow60gTWluaCwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1662205169846!5m2!1svi!2s" width="450" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                  </li>
+              </ul>
+          </div>
+
+          <div class="col-sm-4">
+              <h2>Sản phẩm</h2>
+              <ul class="list-unstyled text-light footer-link-list">
+                  <li><a href="./index.html">Home</a></li>
+                  <li><a href="./shop.html">Shop</a></li>
+                  <li><a href="./forum.html">Forum</a></li>
+                  <li><a href="./gallery.html">Gallery</a></li>     
+              </ul>
+          </div>
+
+          <div class="col-sm-4 ">
+            <h2>Đại học Nguyễn Tất Thành</h2>
+            <ul class="list-unstyled text-light footer-link-list">
+              <li><p class="center-perfect lef"">Copyright © 2022 Trần Thanh Tùng</p></li>
+              <li><p class="center-perfect lef"">Mã sv:2100009418</p></li>
+              <li><p class="center-perfect lef"">Lớp 21DTH3B</p></li>
+              <li><p class="center-perfect lef"">Môn Thiết kế web</p></li>
+              <li><p class="center-perfect lef"">Giáo viên bộ môn: Nguyễn Mai Huy</p></li>
+              <li><a href="mailto:tranminhtung381@gmail.com">tranminhtung381@gmail.com </a></li>
+              <li><a href="mailto:2100009418@nttu.edu.vn">2100009418@nttu.edu.vn</a></li>
+
+              <li><a href="tel:091-9592-395">091-9592-395
+          </ul>
+            
+          </div>
+
+      </div>
+
+
+ 
+
+
+</footer>   
+<script>
+    var news =document.getElementById('subf1');
+
+function luuBaiViet(){
+    var link = document.getElementById('linkTd').value;
+    var tD = document.getElementById('tieuDe').value;
+  
+    news.innerHTML += taoTin(link,tD);
+};
+function taoTin(link,tD){
+    var s="<a href="+link+"<div class='subforum'><div class='content'><p>"+tD+"</p></div><div class='subforum-post'><span>24 post</span></div><div class='subforum-time'><span>Đăng vào ngày 03/28/2019</span></div></div></a>";
+       return s;
+}
+</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script  type = "module"  src = "https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js" > </script> 
+<script  nomodule  src = "https: // unkg .com / ionicons @ 5.5.2 / dist / ionicons / ionicons.js " > </script>
+<script type="text/javascript" src="./assets/js/app.js"></script>
+</body>
+</html>
